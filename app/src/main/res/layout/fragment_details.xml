@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.listproducts.detailsproduct.DetailsFragment"
+    android:padding="10dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/sivImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
+        android:src="@color/cardview_dark_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="5dp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sivImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivStar"
+        app:layout_constraintHorizontal_bias="0"
+        tools:text="Title"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        android:layout_marginVertical="10dp"/>
+
+    <ImageView
+        android:id="@+id/ivStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/star_rating"
+        app:layout_constraintTop_toTopOf="@id/tvRating"
+        app:layout_constraintBottom_toBottomOf="@id/tvRating"
+        app:layout_constraintEnd_toStartOf="@id/tvRating"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="4.9"
+        android:textStyle="bold|italic"
+        android:textSize="25sp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvStock"
+        tools:text="Description"
+        android:textSize="25sp"
+        android:textColor="#787777"
+        android:textStyle="bold|italic"
+        android:layout_marginTop="5dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="5dp"
+        tools:text="Stock"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tvStock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvStock"
+        tools:text="Rp. 100.000"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
